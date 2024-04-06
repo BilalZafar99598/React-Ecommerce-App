@@ -1,5 +1,7 @@
 import { useState } from "react"
 import { data } from './db'
+import ProductItem from "./ProductItem";
+
 const App = () => {
   const [products, setProducts] = useState(data);
 
@@ -8,13 +10,8 @@ const App = () => {
       <ul className="product-list">
         {
           products.map((product) => (
-            <li className="prod-list-items">
-              <div className="list-container">
-                <img className="prod-img" src={product.img} alt="Image Not Loaded" />
-                <p className="prod-name">{product.productName}</p>
-                <p className="prod-price"><span className="price">{product.price}</span></p>
-                <p className="prod-available"><span className="available">{product.available ? 'Stock In' : 'Stock Out'}</span></p>
-              </div>
+            <li className="prod-list-items" key={product.id}>
+              <ProductItem product={product} />
             </li>
           ))
         }

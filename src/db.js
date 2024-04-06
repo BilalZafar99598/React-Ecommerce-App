@@ -14,7 +14,7 @@ export const data = [
         img: 'https://3.imimg.com/data3/LR/VH/MY-12901659/men-printed-shirts-500x500.jpg',
     },
     {
-        id:2,
+        id:3,
         productName: 'Black T-Shirt',
         stockAvailale: true,
         price: '75$',
